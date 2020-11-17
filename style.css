@@ -1,5 +1,15 @@
+/* 
+    Upload to github
+
+1.    git add .
+2.    git commit -m "message"
+3.    git push -u origin master 
+    
+*/
+
 html, body {
     font-family:Roboto;
+    font-size: 16px;
 }
 
 .container {
@@ -23,11 +33,62 @@ html, body {
     flex-direction: row;
 }
  
-.navbar .container, .navbar-top .container {
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;
+.navbar-top .container .socialmedia a {
+    margin: 0 0.5rem;
+}
+
+.navbar-top {
+    border-bottom: 1px solid #707070;
+
+}
+
+.navbar-toggler {
+    font-size: 2rem;
+    color:#2BAAEC;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.navbar-brand {
+    display: inline-block;
 }
 
 
 
+/* Tog denna från dig eftersom jag fattar inte media quarry så mycket */
+
+@media (min-width: 768px) {
+    .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+    
+    .collapse:not(.show) {
+        display: flex;
+    }
+
+    .container {
+        max-width: 720px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
