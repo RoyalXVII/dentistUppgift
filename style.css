@@ -5,15 +5,29 @@
 2.    git commit -m "message"
 3.    git push -u origin master 
     
+
+    Todo list, 
+    
+    Fix the scaling of the page.
+    Fix the icons so they have the same color as the adobe XD file.
+
+    continue with the Showcase and fix that.
+
 */
 
 html, body {
-    font-family:Roboto;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: #626262;
 }
 
 .container {
     padding: 0.5rem;
+    margin: 20px;
 }
 
 .navbar .container, .navbar-top .container {
@@ -21,6 +35,7 @@ html, body {
     justify-content: space-between;  
     align-items: center;
     color:#626262;
+    
 }
 
 .navbar-top .container .hours i {
@@ -53,16 +68,67 @@ html, body {
     display: inline-block;
 }
 
+.collapse {
+    display: none;
+}
 
+.nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    text-decoration: none;
+    color:#363636;
+}
 
-/* Tog denna från dig eftersom jag fattar inte media quarry så mycket */
+.nav-link:hover {
+    color:#25e6c8;
+}
+
+.socialmedia a {
+    color: #2BAAEC;
+    text-decoration: none;
+}
+
+.socialmedia a:hover {
+    color:#25e6c8;
+}
+
+.flex {
+    display: flex;
+
+}
+
+.bg-grey {
+    background-color: #DEDEDE;
+}
+
+.content {
+    margin:auto;
+    padding-left: 3rem;
+}
+
+.showcaseIMG {
+    width: 70%;
+    height: 70%;
+}
+
+.showcaseBTN {
+    background-color: #25e6c8;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.showcaseBTN:hover {
+    background-color: #2baaec;
+    box-shadow: 0px 0px 8px 2px #696969;
+}
 
 @media (min-width: 768px) {
-    .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-    }
-    
+
     .navbar-nav {
         flex-direction: row;
     }
@@ -77,6 +143,14 @@ html, body {
 
     .container {
         max-width: 720px;
+    }
+    
+    .collapse {
+        display: block;
+    }
+
+    .container {
+        margin: auto;
     }
 
 }
